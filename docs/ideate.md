@@ -9,4 +9,4 @@
 *Welk concept gaan we bouwen en waarom sluit dit het beste aan bij de PvE
 uit de Define fase?*
 ## 3. User Flow (Visueel)
-![User Flow Diagram](./assets/user-flow.png)
+![Userflow](images/userflow.png)
