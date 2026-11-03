@@ -8,6 +8,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hallo wereld</h1>
+
+<?php
+if ($aantal_ingredienten > 0) {?>
+    <ul>
+        <?php foreach ($resultaten_ingredienten as $rij){?>
+            <li>
+                <strong>id: </strong><?= $rij["Naam"]?>,
+            </li>
+            <hr>
+        <?php } ?>
+    </ul>
+<?php } else { ?>
+    <p>geen resultaten gevonden</p>
+<?php } ?>
 </body>
 </html>
