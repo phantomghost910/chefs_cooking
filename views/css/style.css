@@ -1,0 +1,94 @@
+body {
+    background-color: #F7F3E8;
+    font-family: Arial, sans-serif;
+    color: #333333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    color: #344A36;
+}
+
+/* Zoekbalk */
+.topnav {
+    background-color: #344A36;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.topnav input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #A8B99A;
+    border-radius: 8px;
+}
+
+/* Geen recepten gevonden */
+#noResults {
+    text-align: center;
+    color: #C8795B;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Recepten */
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    background-color: white;
+    border: 1px solid #A8B99A;
+    border-radius: 10px;
+    color: #333333;
+}
+
+/* Afbeeldingen */
+.box img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Titels */
+.box h1 {
+    color: #344A36;
+    text-align: center;
+}
+
+/* Prijs */
+.box h2 {
+    color: #C8795B;
+}
+
+/* Bereidingstijd */
+.box h3 {
+    color: #52634D;
+}
+
+/* Beschrijving */
+.box p {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Mobiele telefoon */
+@media screen and (max-width: 600px) {
+    .box {
+        width: 100%;
+    }
+
+    .topnav input {
+        width: 100%;
+    }
+}
