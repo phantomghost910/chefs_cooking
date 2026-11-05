@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -8,8 +7,8 @@
 
     <title>Chefs cooking</title>
 
-    <link rel="stylesheet" href="css/style.css">
-    <script src="script/script.js" defer></script>
+    <link rel="stylesheet" href="views/css/style.css">
+    <script src="views/script/script.js" defer></script>
 
 </head>
 
@@ -82,249 +81,37 @@
 </p>
 
 <!-- Container -->
+<?php
+if ($aantal_recepten > 0){?>
 
 <div class="container">
 
     <!-- Recept 1 -->
 
-    <div class="box"
-         data-category="pasta"
-         data-time="20"
-         data-price="2.50">
+        <?php foreach ($resultaten_recepten as $rij) { ?>
+        <div class="box"
+            data-category="pasta"
+            data-time="20"
+            data-price="2.50">
 
-        <img src="./images/tomaten pasta.webp" alt="Foto">
+            <img src="<?= $rij["foto"] ?>" alt="Foto">
 
-        <h1>Tomaten pasta</h1>
+            <h1><?= $rij["Naam"] ?></h1>
 
-        <h2>Prijs: €1,80 – €2,50</h2>
+            <h2>Prijs: <?= $rij["Prijs"] ?></h2>
 
-        <h3>Bereidingstijd: 20 minuten</h3>
+            <h3>Bereidingstijd: <?= $rij["Tijd"] ?></h3>
 
-        <p>Zin in een heerlijke Italiaanse maaltijd zonder veel geld uit te geven? Ontdek deze smaakvolle spaghetti boordevol groenten!</p>
+            <p><?= $rij["info"] ?></p>
 
-        <a href="recept.html?id=tomaten-pasta" class="recipeButton">
+            <a href="recept.html?id=tomaten-pasta" class="recipeButton">
             Bekijk recept →
-        </a>
+            </a>
+        </div>
+        <?php }  ?>
 
-    </div>
-
-
-    <!-- Recept 2 -->
-
-    <div class="box"
-         data-category="vlees"
-         data-time="25"
-         data-price="3.50">
-
-        <img src="./images/rijst.jpg" alt="Foto">
-
-        <h1>Rijst met kip en groenten</h1>
-
-        <h2>Prijs: €2,50 – €3,50</h2>
-
-        <h3>Bereidingstijd: 25 minuten</h3>
-
-        <p>Op zoek naar een voedzame maaltijd die je snel op tafel zet? Deze rijst met kip en groenten is perfect voor een drukke student!</p>
-
-        <a href="recept.html?id=rijst-kip" class="recipeButton">
-            Bekijk recept →
-        </a>
-
-    </div>
-
-
-    <!-- Recept 3 -->
-
-    <div class="box"
-         data-category="vegetarisch"
-         data-time="15"
-         data-price="2.20">
-
-        <img src="./images/omelet.png" alt="Foto">
-
-        <h1>Groenteomelet</h1>
-
-        <h2>Prijs: €1,50 – €2,20</h2>
-
-        <h3>Bereidingstijd: 10–15 minuten</h3>
-
-        <p>Weinig tijd en weinig ingrediënten in huis? Maak deze heerlijke groenteomelet die binnen 15 minuten klaar is!</p>
-
-        <a href="recept.html?id=groenteomelet" class="recipeButton">
-            Bekijk recept →
-        </a>
-
-    </div>
-
-
-    <!-- Recept 4 -->
-
-    <div class="box"
-         data-category="vegetarisch"
-         data-time="25"
-         data-price="2.80">
-
-        <img src="./images/chili.png" alt="Foto">
-
-        <h1>Chili sin carne</h1>
-
-        <h2>Prijs: €2,00 – €2,80</h2>
-
-        <h3>Bereidingstijd: 25 minuten</h3>
-
-        <p>Wie zegt dat lekker eten duur moet zijn? Deze goedgevulde chili zit boordevol smaak, groenten en plantaardige eiwitten!</p>
-
-        <a href="recept.html?id=chili-sin-carne" class="recipeButton">
-            Bekijk recept →
-        </a>
-
-    </div>
-
-
-    <!-- Recept 5 -->
-
-    <div class="box"
-         data-category="vis"
-         data-time="20"
-         data-price="3.00">
-
-        <img src="./images/tonijnPasta.jpg" alt="Foto">
-
-        <h1>Pastasalade met tonijn</h1>
-
-        <h2>Prijs: €2,00 – €3,00</h2>
-
-        <h3>Bereidingstijd: 15–20 minuten</h3>
-
-        <p>Geen zin om lang in de keuken te staan? Deze frisse pastasalade met tonijn is ideaal voor een snelle lunch of avondmaaltijd!</p>
-
-        <a href="recept.html?id=tonijn-pasta" class="recipeButton">
-            Bekijk recept →
-        </a>
-
-    </div>
-
-
-    <!-- Recept 6 -->
-
-    <div class="box"
-         data-category="vegetarisch"
-         data-time="30"
-         data-price="2.80">
-
-        <img src="./images/kikkererewten.jpg.webp" alt="Foto">
-
-        <h1>Kikkererwtencurry</h1>
-
-        <h2>Prijs: €2,00 – €2,80</h2>
-
-        <h3>Bereidingstijd: 25–30 minuten</h3>
-
-        <p>Zin in iets kruidigs en verrassends? Probeer deze romige kikkererwtencurry die lekker, gezond én budgetvriendelijk is!</p>
-
-        <a href="recept.html?id=kikkererwtencurry" class="recipeButton">
-            Bekijk recept →
-        </a>
-
-    </div>
-
-
-    <!-- Recept 7 -->
-
-    <div class="box"
-         data-category="vlees"
-         data-time="15"
-         data-price="3.50">
-
-        <img src="./images/wraps.png" alt="Foto">
-
-        <h1>Volkoren wraps met kip</h1>
-
-        <h2>Prijs: €2,50 – €3,50</h2>
-
-        <h3>Bereidingstijd: 15 minuten</h3>
-
-        <p>Op zoek naar een snelle maaltijd die je helemaal naar eigen smaak kunt vullen? Deze volkoren wraps met kip zijn de perfecte keuze!</p>
-
-        <a href="recept.html?id=wraps-kip" class="recipeButton">
-            Bekijk recept →
-        </a>
-
-    </div>
-
-
-    <!-- Recept 8 -->
-
-    <div class="box"
-         data-category="vegetarisch"
-         data-time="40"
-         data-price="2.50">
-
-        <img src="./images/aardappel.jpg" alt="Foto">
-
-        <h1>Gepofte aardappel met hüttenkäse</h1>
-
-        <h2>Prijs: €1,50 – €2,50</h2>
-
-        <h3>Bereidingstijd: 30–40 minuten</h3>
-
-        <p>Maak van een simpele aardappel een heerlijke maaltijd! Deze gepofte aardappel met hüttenkäse is verrassend lekker en goedkoop!</p>
-
-        <a href="recept.html?id=aardappel" class="recipeButton">
-            Bekijk recept →
-        </a>
-
-    </div>
-
-
-    <!-- Recept 9 -->
-
-    <div class="box"
-         data-category="vegetarisch"
-         data-time="30"
-         data-price="2.20">
-
-        <img src="./images/linzensoep-2.jpg" alt="Foto">
-
-        <h1>Linzensoep</h1>
-
-        <h2>Prijs: €1,50 – €2,20</h2>
-
-        <h3>Bereidingstijd: 25–30 minuten</h3>
-
-        <p>Op koude dagen is er niets lekkerder dan een warme kom soep! Deze voedzame linzensoep is goedkoop, makkelijk en perfect voor meerdere dagen!</p>
-
-        <a href="recept.html?id=linzensoep" class="recipeButton">
-            Bekijk recept →
-        </a>
-
-    </div>
-
-
-    <!-- Recept 10 -->
-
-    <div class="box"
-         data-category="rijst"
-         data-time="15"
-         data-price="2.20">
-
-        <img src="./images/FriedRice.jpg" alt="Foto">
-
-        <h1>Gebakken rijst met ei</h1>
-
-        <h2>Prijs: €1,50 – €2,20</h2>
-
-        <h3>Bereidingstijd: 15 minuten</h3>
-
-        <p>Nog wat rijst en groenten over in de koelkast? Gooi ze niet weg, maar maak er deze heerlijke en budgetvriendelijke gebakken rijst van!</p>
-
-        <a href="recept.html?id=gebakken-rijst" class="recipeButton">
-            Bekijk recept →
-        </a>
-
-    </div>
 
 </div>
-
+<?php }; ?>
 </body>
 </html>

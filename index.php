@@ -1,8 +1,6 @@
 <?php
-
 require "database_connect.php";
 require "table_call_on.php";
-
 
 
 
